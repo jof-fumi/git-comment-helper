@@ -1,6 +1,6 @@
 # 🚀 Git Commit Helper
 
-`chel` (Commit Helper) は、対話式で Git のコミットメッセージを作成する CLI ツールです。
+`chel` (Commit Helper) は、macOSで利用できる、対話式で Git のコミットメッセージを作成する CLI ツールです。
 
 以下のフォーマットでコミットログを作成します。
 
