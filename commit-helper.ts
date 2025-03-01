@@ -75,7 +75,9 @@ const main = async () => {
     message: "修正内容を入力してください:",
   });
 
-  const fullMessage = `[${projectName}] ${ticketNumber} | ${commitMessage}`;
+  const messageProjectName = projectName ? `[${projectName}]` : "";
+  const messageTicketNumber = ticketNumber ? `${ticketNumber} | ` : "";
+  const fullMessage = `${messageProjectName}${messageTicketNumber}${commitMessage}`;
   console.log(`コミットメッセージ: ${fullMessage}`);
 
   const { confirmCommit } = await inquirer.prompt({
