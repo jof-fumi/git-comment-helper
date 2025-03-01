@@ -50,7 +50,8 @@ const main = async () => {
     }
   }
 
-  if (!projectName || !ticketNumber) {
+  // チケットは発行しない作業もあるので、チケット番号がなくても前回のコミットがあれば利用する
+  if (!projectName || (!ticketNumber && !lastCommitInfo)) {
     const answers = await inquirer.prompt([
       {
         type: "input",
